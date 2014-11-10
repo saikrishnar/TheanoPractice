@@ -339,9 +339,9 @@ def test_dA(learning_rate=0.1, training_epochs=15,
 
     training_time = (end_time - start_time)
 
-    print(('The no corruption code for file ' +
-                          os.path.split(__file__)[1] +
-                          ' ran for %.2fm' % ((training_time) / 60.)), file=sys.stderr)
+    print(('The no corruption code for file ' + \
+                    os.path.split(__file__)[1] + \
+                        ' ran for %.2fm' % ((training_time) / 60.)), file=sys.stderr)
     image = Image.fromarray(
         tile_raster_images(X=da.W.get_value(borrow=True).T,
                            img_shape=(28, 28), tile_shape=(10, 10),
